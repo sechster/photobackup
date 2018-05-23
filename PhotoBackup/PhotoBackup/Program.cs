@@ -16,7 +16,7 @@ namespace PhotoBackup
 
             foreach (var album in albums)
             {
-				CopyAlbum(album, "/Volumes/128GB/Photos/Sync");
+				//CopyAlbum(album, "/Volumes/128GB/Photos/Sync");
 				CopyAlbum(album, "/Volumes/Media/Photos/Sync");
                 //DeleteAlbum(album);
             }
