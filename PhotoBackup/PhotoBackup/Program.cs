@@ -14,10 +14,12 @@ namespace PhotoBackup
 
             IEnumerable<Album> albums = photoDirectoryAnalyzer.GetAlbums(directories);
 
-            foreach (var album in albums)
+            foreach (var target in args) 
             {
-				//CopyAlbum(album, "/Volumes/128GB/Photos/Sync");
-				CopyAlbum(album, "/Volumes/Media/Photos/Sync");
+                foreach (var album in albums)
+                {
+                    CopyAlbum(album, target);
+                }
                 //DeleteAlbum(album);
             }
         }
